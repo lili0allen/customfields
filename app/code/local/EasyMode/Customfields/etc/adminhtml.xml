@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<config>
+        <menu>
+            <customfields module="customfields" translate="title">
+                <title>Customfields</title>
+                <sort_order>71</sort_order>
+                <children>
+                    <items module="customfields" translate="title">
+                        <title>Manage Fields</title>
+                        <sort_order>0</sort_order>
+                        <action>customfieldsadmin/adminhtml_customfields</action>
+                    </items>
+                    <groups module="customfields" translate="title">
+                        <title>Manage Groups</title>
+                        <sort_order>1</sort_order>
+                        <action>customfieldsadmin/adminhtml_customgroups</action>
+                    </groups>
+                </children>
+            </customfields>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <customfields module="customfields" translate="title">
+                                            <title>Custom Fields</title>
+                                            <sort_order>71</sort_order>
+                                        </customfields>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                        <customfields module="customfields" translate="title">
+                            <title>Customfields</title>
+                            <sort_order>200</sort_order>
+                            <children>
+                                <items module="customfields" translate="title">
+                                    <title>Manage Field</title>
+                                    <sort_order>0</sort_order>
+                                </items>
+                                <groups module="customfields" translate="title">
+                                    <title>Manage Groups</title>
+                                    <sort_order>1</sort_order>
+                                </groups>
+                            </children>
+                        </customfields>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+        <layout>
+            <updates>
+                <customfields>
+                    <file>customfields.xml</file>
+                </customfields>
+            </updates>
+        </layout>
+</config>

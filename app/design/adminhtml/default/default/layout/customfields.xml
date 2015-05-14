@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.1">
+	<customfieldsadmin_adminhtml_customfields_index>
+        <reference name="content">
+            <block type="customfields/adminhtml_customfields" name="customfields" />
+        </reference>
+    </customfieldsadmin_adminhtml_customfields_index>
+	
+	<customfieldsadmin_adminhtml_customgroups_index>
+		<reference name="content">
+            <block type="customfields/adminhtml_customgroups" name="customfields.customgroups" />
+        </reference>
+	</customfieldsadmin_adminhtml_customgroups_index>
+
+
+</layout>
