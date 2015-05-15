@@ -68,6 +68,7 @@ class EasyMode_Customfields_Adminhtml_CustomfieldsController extends Mage_Adminh
                
                 $customfieldsModel->setId($this->getRequest()->getParam('id'))
                     ->setTitle($postData['title'])
+                    ->setCustomgroupsId($postData['customgroups_id'])
                     ->setContent($postData['content']);
 
                 $customfieldsModel->save();

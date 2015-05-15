@@ -14,13 +14,14 @@ class EasyMode_Customfields_Block_Adminhtml_Customfields_Grid extends Mage_Admin
 
 	protected function _prepareCollection()
 	{
-		$collection = Mage::getModel('customfields/customgroupsfields')->getCollection()->joinFieldsTable();
+		$collection = Mage::getModel('customfields/customfields')->getCollection()->joinGroupsTable();
 		$this->setCollection($collection);
 		return parent::_prepareCollection();
 	}
 
 	protected function _prepareColumns()
 	{
+		
 		$this->addColumn('customfields_id', array(
 			'header'	=> Mage::helper('customfields')->__('ID'),
 			'align'		=> 'right',
@@ -31,19 +32,19 @@ class EasyMode_Customfields_Block_Adminhtml_Customfields_Grid extends Mage_Admin
 		$this->addColumn('title', array(
 			'header'	=> Mage::helper('customfields')->__('Title'),
 			'align'		=> 'left',
-			'index'		=> 'customgroupsfields_id',
+			'index'		=> 'title',
 			));
 
-		$this->addColumn('customgroups_id', array(
+		$this->addColumn('group_title', array(
 			'header'	=> Mage::helper('customfields')->__('Group'),
 			'align'		=> 'left',
-			'index'		=> 'customgroups_id',
+			'index'		=> 'group_title',
 			));
 
 		$this->addColumn('content', array(
 			'header'	=> Mage::helper('customfields')->__('Content'),
 			'align'		=> 'left',
-			'index'		=> 'description',
+			'index'		=> 'content',
 			));
 
 
